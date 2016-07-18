@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="cordova-plugin-rfid" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Rfid</name>
+    <description>Cordova Rfid Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,rfid</keywords>
+    <js-module name="rfid" src="www/rfid.js">
+        <clobbers target="rfid" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Rfid">
+                <param name="android-package" value="com.realidtek.rfid.Rfid" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/Rfid.java" target-dir="src/com/realidtek/rfid" />
+    </platform>
+</plugin>
