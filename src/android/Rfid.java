@@ -33,34 +33,57 @@ public class Rfid extends CordovaPlugin implements DFRfid {
 
     public static DFRfid rfid;
 
+    public static String cardids = ""; 
+
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         Activity activity = this.cordova.getActivity();
         if (action.equals("openDevice")) {
-            callbackContext.success("openDevice");
+            if(openDevice() == true){
+                callbackContext.success("设备已开启");
+            }else{
+                callbackContext.success("设备已关闭");
+            }
             return true;
         }else if(action.equals("closeDevice")) {
-            callbackContext.success("closeDevice");
+            if(openDevice() == true){
+                callbackContext.success("设备已开启");
+            }else{
+                callbackContext.success("设备已关闭");
+            }
             return true;
         }else if(action.equals("scanCycle")) {
-            callbackContext.success("scanCycle");
+            scanCycle(new ScanCycleDataReceiver() {
+                    
+                @Override
+                public void onScanCycleDataReceived(String cardID) {
+                    synchronized (this) {
+                        // 处理获取数据
+                    	cardids += cardID;
+                    }
+                }
+
+                @Override
+                public void onExceptionReceived(Exception ex) {
+                    // TODO 获取扫描异常
+
+                }
+
+                @Override
+                public void onNoTagReceived(boolean isNoTag) {
+                    // TODO 获取是否标签为离开状态
+                }
+            });
+            callbackContext.success(cardids);
             return true;
         }else if(action.equals("scanCycleStop")) {
-            callbackContext.success("scanCycleStop");
+            if(scanCycleStop() == true){
+                callbackContext.success("设备已开启");
+            }else{
+                callbackContext.success("设备已关闭");
+            }
             return true;
         }
         return false;
-    }
-
-    private Rfid() {
-
-    }
-
-    public static DFRfid getInstance() {
-        if (rfid == null) {
-            rfid = new Rfid();
-        }
-
-        return rfid;
     }
 
     public void setWaitTime(int waitTime) {
@@ -87,8 +110,7 @@ public class Rfid extends CordovaPlugin implements DFRfid {
             isOpen = true;
             System.out.println("串口开：" + isOpen);
         } catch (Exception e) {
-            System.out
-                    .println("串口开：" + (e != null ? e.getMessage() : "e null"));
+            System.out.println("串口开：" + (e != null ? e.getMessage() : "e null"));
             isOpen = false;
         }
 
