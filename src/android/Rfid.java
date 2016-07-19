@@ -85,10 +85,10 @@ public class Rfid extends CordovaPlugin implements DFRfid {
             serialPortHelper.openSerialPort(new File(SERIAL_PORT_NAME),
                     BAUDRATE);
             isOpen = true;
-            System.out.println("´®¿Ú¿ª£º" + isOpen);
+            System.out.println("ä¸²å£å¼€ï¼š" + isOpen);
         } catch (Exception e) {
             System.out
-                    .println("´®¿Ú¿ª£º" + (e != null ? e.getMessage() : "e null"));
+                    .println("ä¸²å£å¼€ï¼š" + (e != null ? e.getMessage() : "e null"));
             isOpen = false;
         }
 
