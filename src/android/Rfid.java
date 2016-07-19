@@ -51,13 +51,13 @@ public class Rfid extends CordovaPlugin implements DFRfid {
         return false;
     }
 
-    private NewSJCRfid() {
+    private Rfid() {
 
     }
 
     public static DFRfid getInstance() {
         if (rfid == null) {
-            rfid = new NewSJCRfid();
+            rfid = new Rfid();
         }
 
         return rfid;
