@@ -1,17 +1,17 @@
 var exec = require('cordova/exec');
 
-exports.getRfid = function(success, error) {
+exports.openDevice = function(success, error) {
     exec(success, error, "Rfid", "openDevice", []);
 };
 
-exports.getRfid = function(success, error) {
+exports.closeDevice = function(success, error) {
     exec(success, error, "Rfid", "closeDevice", []);
 };
 
-exports.getRfid = function(success, error) {
+exports.scanCycle = function(success, error) {
     exec(success, error, "Rfid", "scanCycle", []);
 };
 
-exports.getRfid = function(success, error) {
+exports.scanCycleStop = function(success, error) {
     exec(success, error, "Rfid", "scanCycleStop", []);
 };
