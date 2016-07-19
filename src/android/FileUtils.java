@@ -4,18 +4,18 @@ import java.io.*;
 import java.util.*;
 
 /**
- * ÎÄ¼ş²Ù×÷Àà.<br>
+ * æ–‡ä»¶æ“ä½œç±».<br>
  * <br>
  * CreateDate: 2013-6-14<br>
  * Copyright: Copyright(c) 2013-6-14<br>
- * Company: Á¿¹ÈÎŞÏß<br>
+ * Company: é‡è°·æ— çº¿<br>
  * 
  * @since v1.0.0
- * @Description 2013-6-14::ÕÅË³::´´½¨´ËÀà</br>
+ * @Description 2013-6-14::å¼ é¡º::åˆ›å»ºæ­¤ç±»</br>
  */
 public class FileUtils {
 	/**
-	 * ÅĞ¶ÏSD¿¨ÉÏµÄÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
+	 * åˆ¤æ–­SDå¡ä¸Šçš„æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨
 	 */
 	public boolean isExist(String fileName) {
 		File file = new File(fileName);
@@ -57,12 +57,12 @@ public class FileUtils {
 	}
 
 	/**
-	 * ÅĞ¶ÏÂ·¾¶ÊÇ·ñ´æÔÚ.<br>
-	 * ²»´æÔÚÔò´´½¨<br>
+	 * åˆ¤æ–­è·¯å¾„æ˜¯å¦å­˜åœ¨.<br>
+	 * ä¸å­˜åœ¨åˆ™åˆ›å»º<br>
 	 * 
 	 * @param path
 	 * @return
-	 * @Description 2013-7-1::ÕÅË³::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-7-1::å¼ é¡º::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static boolean pathExists(String path) {
 		boolean re = true;
@@ -81,7 +81,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * É¾³ıÎÄ¼ş»òÎÄ¼ş¼Ğ
+	 * åˆ é™¤æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹
 	 * 
 	 * @param fileName
 	 * @return
@@ -92,7 +92,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * Í¨¹ıµİ¹é·½Ê½É¾³ıÎÄ¼ş»òÎÄ¼ş¼Ğ
+	 * é€šè¿‡é€’å½’æ–¹å¼åˆ é™¤æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹
 	 * 
 	 * @param file
 	 */

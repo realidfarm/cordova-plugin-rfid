@@ -17,13 +17,13 @@ public class Text {
 	}
 
 	/**
-	 * Çå³ı×Ö´®ÖĞËùÓĞ¿Õ¸ñ.<br>
+	 * æ¸…é™¤å­—ä¸²ä¸­æ‰€æœ‰ç©ºæ ¼.<br>
 	 * <br>
 	 * 
 	 * @param data
-	 *            ´ı´¦Àí×Ö´®
+	 *            å¾…å¤„ç†å­—ä¸²
 	 * @return
-	 * @Description 2013-9-5::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static String clearSpace(String data) {
 		String re = "";
@@ -36,12 +36,12 @@ public class Text {
 	}
 
 	/**
-	 * ½«Ö¸¶¨×Ö·û´®ÒÔÃ¿Á½¸ö×Ö·û·Ö¸î×ª»»Îª16½øÖÆĞÎÊ½.<br>
-	 * Èç£º"2B44EFD9" --> byte[]{0x2B, 0x44, 0xEF, 0xD9}<br>
+	 * å°†æŒ‡å®šå­—ç¬¦ä¸²ä»¥æ¯ä¸¤ä¸ªå­—ç¬¦åˆ†å‰²è½¬æ¢ä¸º16è¿›åˆ¶å½¢å¼.<br>
+	 * å¦‚ï¼š"2B44EFD9" --> byte[]{0x2B, 0x44, 0xEF, 0xD9}<br>
 	 * 
 	 * @param src
-	 * @return 16½øÖÆĞÎÊ½µÄ×Ö½ÚÊı×é
-	 * @Description 2013-9-5::::´´½¨´Ë·½·¨</br>
+	 * @return 16è¿›åˆ¶å½¢å¼çš„å­—èŠ‚æ•°ç»„
+	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static byte[] hexString2Bytes(String src) {
 		byte[] tmp = src.getBytes();
@@ -57,13 +57,13 @@ public class Text {
 	}
 
 	/**
-	 * ½«Á½¸öASCII×Ö·ûºÏ³ÉÒ»¸ö×Ö½Ú.<br>
-	 * Èç£º"EF"--> 0xEF<br>
+	 * å°†ä¸¤ä¸ªASCIIå­—ç¬¦åˆæˆä¸€ä¸ªå­—èŠ‚.<br>
+	 * å¦‚ï¼š"EF"--> 0xEF<br>
 	 * 
-	 * @param µÍÎ»×Ö½Ú
-	 * @param ¸ßÎ»×Ö½Ú
-	 * @return ºÏ²¢ºóµÄ×Ö½Ú
-	 * @Description 2013-9-5::::´´½¨´Ë·½·¨</br>
+	 * @param ä½ä½å­—èŠ‚
+	 * @param é«˜ä½å­—èŠ‚
+	 * @return åˆå¹¶åçš„å­—èŠ‚
+	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static byte uniteBytes(byte src0, byte src1) {
 		byte _b0 = Byte.decode("0x" + new String(new byte[] { src0 })).byteValue();
@@ -74,13 +74,13 @@ public class Text {
 	}
 
 	/**
-	 * ½«×Ö½ÚÊı×é×ªÎª×Ö·û´®.<br>
+	 * å°†å­—èŠ‚æ•°ç»„è½¬ä¸ºå­—ç¬¦ä¸².<br>
 	 * <br>
 	 * 
 	 * @param bArray
-	 *            ´ı×ª»»µÄ×Ö½ÚÊı×é
-	 * @return ×ª»»ºóµÄ×Ö·û´®
-	 * @Description 2013-9-5::::´´½¨´Ë·½·¨</br>
+	 *            å¾…è½¬æ¢çš„å­—èŠ‚æ•°ç»„
+	 * @return è½¬æ¢åçš„å­—ç¬¦ä¸²
+	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static String byteToHexString(byte[] bArray) {
 		if (bArray == null) {
@@ -98,12 +98,12 @@ public class Text {
 	}
 
 	/**
-	 * ×Ö·û´®×ª×Ö½ÚÊı×é.<br>
+	 * å­—ç¬¦ä¸²è½¬å­—èŠ‚æ•°ç»„.<br>
 	 * <br>
 	 * 
 	 * @param s
 	 * @return
-	 * @Description 2013-9-26::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-26::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static byte[] hexStringToByteArray(String s) {
 		byte[] buf = new byte[s.length() / 2];
@@ -114,12 +114,12 @@ public class Text {
 	}
 
 	/**
-	 * µ¥¸ö×Ö·û×ª×Ö½ÚÊı.<br>
+	 * å•ä¸ªå­—ç¬¦è½¬å­—èŠ‚æ•°.<br>
 	 * <br>
 	 * 
 	 * @param chr
 	 * @return
-	 * @Description 2013-9-26::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-26::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static byte chr2hex(String chr) {
 		if (chr.equals("0")) {
@@ -159,12 +159,12 @@ public class Text {
 	}
 
 	/**
-	 * È¥µô×Ö·û´®½áÎ²µÄ0.<br>
+	 * å»æ‰å­—ç¬¦ä¸²ç»“å°¾çš„0.<br>
 	 * <br>
 	 * 
 	 * @param str
 	 * @return
-	 * @Description 2013-9-27::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-27::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public synchronized static String removeTail0(String str) {
 		if (TextUtils.isEmpty(str)) {
@@ -174,12 +174,12 @@ public class Text {
 	}
 
 	/**
-	 * È¥µô×Ö·û´®¿ªÍ·µÄ0.<br>
+	 * å»æ‰å­—ç¬¦ä¸²å¼€å¤´çš„0.<br>
 	 * <br>
 	 * 
 	 * @param str
 	 * @return
-	 * @Description 2013-9-27::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-27::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public synchronized static String removeHead0(String str) {
 		if (TextUtils.isEmpty(str)) {
@@ -212,7 +212,7 @@ public class Text {
 		StringBuffer sb = null;
 		while (strLen < totalWidth) {
 			sb = new StringBuffer();
-			sb.append(str).append(paddingString);// ÓÒ(ºó)²¹0
+			sb.append(str).append(paddingString);// å³(å)è¡¥0
 			str = sb.toString();
 			strLen = str.length();
 		}
@@ -228,11 +228,11 @@ public class Text {
 
 	// ====================================================================
 	/**
-	 * intÕûÊı×ª»»Îª4×Ö½ÚµÄbyteÊı×é
+	 * intæ•´æ•°è½¬æ¢ä¸º4å­—èŠ‚çš„byteæ•°ç»„
 	 * 
 	 * @param i
-	 *            ÕûÊı
-	 * @return byteÊı×é
+	 *            æ•´æ•°
+	 * @return byteæ•°ç»„
 	 */
 	public static byte[] intToByte4(int i) {
 		byte[] targets = new byte[4];
@@ -244,11 +244,11 @@ public class Text {
 	}
 
 	/**
-	 * longÕûÊı×ª»»Îª8×Ö½ÚµÄbyteÊı×é
+	 * longæ•´æ•°è½¬æ¢ä¸º8å­—èŠ‚çš„byteæ•°ç»„
 	 * 
 	 * @param lo
-	 *            longÕûÊı
-	 * @return byteÊı×é
+	 *            longæ•´æ•°
+	 * @return byteæ•°ç»„
 	 */
 	public static byte[] longToByte8(long lo) {
 		byte[] targets = new byte[8];
@@ -260,11 +260,11 @@ public class Text {
 	}
 
 	/**
-	 * shortÕûÊı×ª»»Îª2×Ö½ÚµÄbyteÊı×é
+	 * shortæ•´æ•°è½¬æ¢ä¸º2å­—èŠ‚çš„byteæ•°ç»„
 	 * 
 	 * @param s
-	 *            shortÕûÊı
-	 * @return byteÊı×é
+	 *            shortæ•´æ•°
+	 * @return byteæ•°ç»„
 	 */
 	public static byte[] unsignedShortToByte2(int s) {
 		byte[] targets = new byte[2];
@@ -274,24 +274,24 @@ public class Text {
 	}
 
 	/**
-	 * byteÊı×é×ª»»ÎªÎŞ·ûºÅshortÕûÊı
+	 * byteæ•°ç»„è½¬æ¢ä¸ºæ— ç¬¦å·shortæ•´æ•°
 	 * 
 	 * @param bytes
-	 *            byteÊı×é
-	 * @return shortÕûÊı
+	 *            byteæ•°ç»„
+	 * @return shortæ•´æ•°
 	 */
 	public static int byte2ToUnsignedShort(byte[] bytes) {
 		return byte2ToUnsignedShort(bytes, 0);
 	}
 
 	/**
-	 * byteÊı×é×ª»»ÎªÎŞ·ûºÅshortÕûÊı
+	 * byteæ•°ç»„è½¬æ¢ä¸ºæ— ç¬¦å·shortæ•´æ•°
 	 * 
 	 * @param bytes
-	 *            byteÊı×é
+	 *            byteæ•°ç»„
 	 * @param off
-	 *            ¿ªÊ¼Î»ÖÃ
-	 * @return shortÕûÊı
+	 *            å¼€å§‹ä½ç½®
+	 * @return shortæ•´æ•°
 	 */
 	public static int byte2ToUnsignedShort(byte[] bytes, int off) {
 		int high = bytes[off];
@@ -300,13 +300,13 @@ public class Text {
 	}
 
 	/**
-	 * byteÊı×é×ª»»ÎªintÕûÊı
+	 * byteæ•°ç»„è½¬æ¢ä¸ºintæ•´æ•°
 	 * 
 	 * @param bytes
-	 *            byteÊı×é
+	 *            byteæ•°ç»„
 	 * @param off
-	 *            ¿ªÊ¼Î»ÖÃ
-	 * @return intÕûÊı
+	 *            å¼€å§‹ä½ç½®
+	 * @return intæ•´æ•°
 	 */
 	public static int byte4ToInt(byte[] bytes, int off) {
 		int b0 = bytes[off] & 0xFF;

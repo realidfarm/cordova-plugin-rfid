@@ -7,12 +7,12 @@ import android.text.TextUtils;
 
 public class Datetime {
 	/**
-	 * °´Ö¸¶¨¸ñÊ½ÏÔÊ¾µ±Ç°ÈÕÆÚÊ±¼ä.<br>
+	 * æŒ‰æŒ‡å®šæ ¼å¼æ˜¾ç¤ºå½“å‰æ—¥æœŸæ—¶é—´.<br>
 	 * <br>
 	 * 
 	 * @param format
 	 * @return
-	 * @Description 2013-6-15::ÕÅË³::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-6-15::å¼ é¡º::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static String nowDateTime(String format) {
 		if (TextUtils.isEmpty(format)) {
@@ -25,11 +25,11 @@ public class Datetime {
 	}
 
 	/**
-	 * °´Ö¸¶¨¸ñÊ½ÏÔÊ¾µ±Ç°ÈÕÆÚÊ±¼ä.<br>
+	 * æŒ‰æŒ‡å®šæ ¼å¼æ˜¾ç¤ºå½“å‰æ—¥æœŸæ—¶é—´.<br>
 	 * <br>
 	 * 
 	 * @return
-	 * @Description 2013-6-15::ÕÅË³::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-6-15::å¼ é¡º::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static String nowDateTime() {
 		return nowDateTime("");
@@ -46,7 +46,7 @@ public class Datetime {
 			c1.setTime(df.parse(data1));
 			c2.setTime(df.parse(data2));
 		} catch (java.text.ParseException e) {
-			System.err.println("¸ñÊ½²»ÕıÈ·");
+			System.err.println("æ ¼å¼ä¸æ­£ç¡®");
 		}
 		re = c1.compareTo(c2);
 
