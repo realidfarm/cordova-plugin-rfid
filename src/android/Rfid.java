@@ -1,5 +1,7 @@
 package com.realidtek.rfid;
 
+import android.app.Activity;
+import android.content.Intent;
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -15,9 +17,9 @@ public class Rfid extends CordovaPlugin {
         if (action.equals("getRfid")) {
             Intent i = activity.getIntent();
             if (i.hasExtra(Intent.EXTRA_TEXT)) {
-                callbackContext.success(i.getStringExtra(Intent.EXTRA_TEXT));
+                callbackContext.success("success");
             } else {
-                callbackContext.error("");
+                callbackContext.error("error");
             }
             return true;
         }
