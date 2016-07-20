@@ -38,15 +38,19 @@ public class Rfid extends CordovaPlugin implements DFRfid {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         Activity activity = this.cordova.getActivity();
         if (action.equals("openDevice")) {
-            if(openDevice() == true){
+            if(isOpen == true){
                 callbackContext.success("设备已开启");
             }else{
-                callbackContext.success("设备已关闭");
+                openDevice();
+                callbackContext.success("设备已开启");
             }
             return true;
         }else if(action.equals("closeDevice")) {
-            if(openDevice() == true){
-                callbackContext.success("设备已开启");
+            if(isOpen == true){
+                closeDevice();
+                if(isOpen == false){
+                    callbackContext.success("设备已关闭");
+                }
             }else{
                 callbackContext.success("设备已关闭");
             }
@@ -58,7 +62,7 @@ public class Rfid extends CordovaPlugin implements DFRfid {
                 public void onScanCycleDataReceived(String cardID) {
                     synchronized (this) {
                         // 处理获取数据
-                    	cardids += cardID;
+                        cardids = cardID;
                     }
                 }
 
@@ -74,13 +78,16 @@ public class Rfid extends CordovaPlugin implements DFRfid {
                 }
             });
             callbackContext.success(cardids);
+            cardids = "";
             return true;
         }else if(action.equals("scanCycleStop")) {
-            if(scanCycleStop() == true){
-                callbackContext.success("设备已开启");
+            boolean scan = scanCycleStop();
+            if(scan == true){
+                callbackContext.success("循环已停止");
             }else{
-                callbackContext.success("设备已关闭");
+                callbackContext.success("设备循环中");
             }
+            
             return true;
         }
         return false;
@@ -280,13 +287,4 @@ public class Rfid extends CordovaPlugin implements DFRfid {
 
         return re;
     }
-
-
-
-
-
-
-
-
-
 }
