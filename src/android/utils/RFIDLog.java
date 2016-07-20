@@ -68,7 +68,7 @@ public class RFIDLog {
 					file.createNewFile();
 				}
 
-				// 检查文件大小，文件过大则备份，然后清空日志文件
+				// 妫�鏌ユ枃浠跺ぇ灏忥紝鏂囦欢杩囧ぇ鍒欏浠斤紝鐒跺悗娓呯┖鏃ュ織鏂囦欢
 				if (FileHelper.getFileSizes(file) >= MAX_SIZE) {
 					FileHelper.move(fileName, path + "/Log_bak.txt");
 				}
