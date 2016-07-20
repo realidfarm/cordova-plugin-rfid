@@ -1,4 +1,4 @@
-package rfid.df.utils;
+package com.realidtek.rfid.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -7,12 +7,12 @@ import android.text.TextUtils;
 
 public class Datetime {
 	/**
-	 * é¸å¤‹å¯šç€¹æ°­ç‰¸å¯®å¿”æ¨‰ç»€å“„ç¶‹é“å¶†æ£©éˆç†¸æ¤‚é—‚ï¿½<br>
+	 * °´Ö¸¶¨¸ñÊ½ÏÔÊ¾µ±Ç°ÈÕÆÚÊ±¼ä.<br>
 	 * <br>
 	 * 
 	 * @param format
 	 * @return
-	 * @Description 2013-6-15::å¯®çŠ»ã€::é’æ¶˜ç¼“å§ã‚†æŸŸå¨‰ï¿½/br>
+	 * @Description 2013-6-15::ÕÅË³::´´½¨´Ë·½·¨</br>
 	 */
 	public static String nowDateTime(String format) {
 		if (TextUtils.isEmpty(format)) {
@@ -25,11 +25,11 @@ public class Datetime {
 	}
 
 	/**
-	 * é¸å¤‹å¯šç€¹æ°­ç‰¸å¯®å¿”æ¨‰ç»€å“„ç¶‹é“å¶†æ£©éˆç†¸æ¤‚é—‚ï¿½<br>
+	 * °´Ö¸¶¨¸ñÊ½ÏÔÊ¾µ±Ç°ÈÕÆÚÊ±¼ä.<br>
 	 * <br>
 	 * 
 	 * @return
-	 * @Description 2013-6-15::å¯®çŠ»ã€::é’æ¶˜ç¼“å§ã‚†æŸŸå¨‰ï¿½/br>
+	 * @Description 2013-6-15::ÕÅË³::´´½¨´Ë·½·¨</br>
 	 */
 	public static String nowDateTime() {
 		return nowDateTime("");
@@ -46,7 +46,7 @@ public class Datetime {
 			c1.setTime(df.parse(data1));
 			c2.setTime(df.parse(data2));
 		} catch (java.text.ParseException e) {
-			//System.err.println("éç…ç´¡æ¶“å¶†î„œçº­ï¿½);
+			System.err.println("¸ñÊ½²»ÕıÈ·");
 		}
 		re = c1.compareTo(c2);
 

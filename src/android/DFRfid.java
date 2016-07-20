@@ -3,40 +3,40 @@ package com.realidtek.rfid;
 public interface DFRfid {
 
 	/**
-	 * æ‰“å¼€è®¾å¤‡.<br>
+	 * ´ò¿ªÉè±¸.<br>
 	 * <br>
 	 * 
-	 * @return æ˜¯å¦å¼€å¯
-	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•<br>
+	 * @return ÊÇ·ñ¿ªÆô
+	 * @Description 2013-9-5::::´´½¨´Ë·½·¨<br>
 	 */
 	public boolean openDevice();
 
 	/**
-	 * å…³é—­è®¾å¤‡.<br>
+	 * ¹Ø±ÕÉè±¸.<br>
 	 * <br>
 	 * 
-	 * @return æ˜¯å¦å…³é—­
-	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•<br>
+	 * @return ÊÇ·ñ¹Ø±Õ
+	 * @Description 2013-9-5::::´´½¨´Ë·½·¨<br>
 	 */
 	public boolean closeDevice();
 
 	/**
-	 * å¾ªç¯æ‰«å¡è¯»æ ‡ç­¾.<br>
+	 * Ñ­»·É¨¿¨¶Á±êÇ©.<br>
 	 * <br>
 	 * 
 	 * @param scanCycleDataReceiver
-	 *            å¾ªç¯è¯»å¡æ•°æ®æ¥æ”¶æ¥å£
+	 *            Ñ­»·¶Á¿¨Êı¾İ½ÓÊÕ½Ó¿Ú
 	 * @return
-	 * @Description 2013-9-26::::åˆ›å»ºæ­¤æ–¹æ³•</br>
+	 * @Description 2013-9-26::::´´½¨´Ë·½·¨</br>
 	 */
 	public void scanCycle(ScanCycleDataReceiver scanCycleDataReceiver);
 
 	/**
-	 * åœæ­¢å¾ªç¯æ‰«å¡.<br>
+	 * Í£Ö¹Ñ­»·É¨¿¨.<br>
 	 * <br>
 	 * 
-	 * @return æ˜¯å¦æˆåŠŸ
-	 * @Description 2013-9-26::::åˆ›å»ºæ­¤æ–¹æ³•</br>
+	 * @return ÊÇ·ñ³É¹¦
+	 * @Description 2013-9-26::::´´½¨´Ë·½·¨</br>
 	 */
 	public boolean scanCycleStop();
 }

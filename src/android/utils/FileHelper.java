@@ -1,4 +1,4 @@
-package rfid.df.utils;
+package com.realidtek.rfid.utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
