@@ -46,10 +46,8 @@
         
         <source-file src="src/android/Rfid.java" target-dir="src/com/realidtek/rfid" />
         <source-file src="src/android/DFRfid.java" target-dir="src/com/realidtek/rfid" />
-        <source-file src="src/android/FileUtils.java" target-dir="src/com/realidtek/rfid" />
+        <source-file src="src/android/Sound.java" target-dir="src/com/realidtek/rfid" />
         <source-file src="src/android/ScanCycleDataReceiver.java" target-dir="src/com/realidtek/rfid" />
-        <source-file src="src/android/utils/Datetime.java" target-dir="src/com/realidtek/rfid/utils" />
-        <source-file src="src/android/utils/FileHelper.java" target-dir="src/com/realidtek/rfid/utils" />
         <source-file src="src/android/utils/RFIDLog.java" target-dir="src/com/realidtek/rfid/utils" />
         <source-file src="src/android/utils/Text.java" target-dir="src/com/realidtek/rfid/utils" />
 

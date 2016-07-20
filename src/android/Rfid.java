@@ -63,6 +63,7 @@ public class Rfid extends CordovaPlugin implements DFRfid {
                     synchronized (this) {
                         // 处理获取数据
                         cardids = cardID;
+                		Sound.callAlarm(cordova.getActivity());
                     }
                 }
 
