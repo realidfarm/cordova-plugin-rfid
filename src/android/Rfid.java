@@ -63,7 +63,6 @@ public class Rfid extends CordovaPlugin implements DFRfid {
                     synchronized (this) {
                         // 处理获取数据
                         cardids = cardID;
-                		Sound.callAlarm(cordova.getActivity());
                     }
                 }
 
@@ -79,6 +78,9 @@ public class Rfid extends CordovaPlugin implements DFRfid {
                 }
             });
             callbackContext.success(cardids);
+            if(cardids != ""){
+                Sound.callAlarm(cordova.getActivity());
+            }
             cardids = "";
             return true;
         }else if(action.equals("scanCycleStop")) {
