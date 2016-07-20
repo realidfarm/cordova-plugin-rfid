@@ -6,60 +6,60 @@ import android.media.MediaPlayer;
 import android.os.Vibrator;
 
 /**
- * ÌáĞÑÉùÒôºÍÌáĞÑÕğ¶¯.<br>
+ * æé†’å£°éŸ³å’Œæé†’éœ‡åŠ¨.<br>
  * <br>
  * CreateDate: 2013-8-30<br>
  * Copyright: Copyright(c) 2013-8-30<br>
  * <br>
  * 
  * @since v1.0.0
- * @Description 2013-8-30::::´´½¨´ËÀà</br>
+ * @Description 2013-8-30::::åˆ›å»ºæ­¤ç±»</br>
  */
 public class Sound {
 
 	/**
-	 * Ê§°ÜÌáÊ¾ÒôºÍÌáÊ¾Õğ¶¯.<br>
+	 * å¤±è´¥æç¤ºéŸ³å’Œæç¤ºéœ‡åŠ¨.<br>
 	 * <br>
 	 * 
 	 * @param context
-	 * @Description 2013-9-9::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-9::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static void callAlarmAsShiBai(Context context) {
 		AudioManager audioManager = (AudioManager) context
-				.getSystemService(Context.AUDIO_SERVICE); // ²¥·ÅÌáÊ¾Òô
+				.getSystemService(Context.AUDIO_SERVICE); // æ’­æ”¾æç¤ºéŸ³
 		int max = audioManager
 				.getStreamMaxVolume(AudioManager.STREAM_NOTIFICATION);
 		int current = audioManager
 				.getStreamVolume(AudioManager.STREAM_NOTIFICATION);
 		MediaPlayer player = MediaPlayer.create(context, R.raw.shibai);
 		player.setVolume((float) current / (float) max, (float) current
-				/ (float) max); // ÉèÖÃÌáÊ¾ÒôÁ¿
-		player.start();// ²¥·ÅÌáÊ¾Òô
+				/ (float) max); // è®¾ç½®æç¤ºéŸ³é‡
+		player.start();// æ’­æ”¾æç¤ºéŸ³
 
 		Vibrator vibrator = (Vibrator) context
-				.getSystemService(Context.VIBRATOR_SERVICE); // Õñ¶¯100ºÁÃë
-		vibrator.vibrate(100); // Õñ¶¯100ºÁÃë
+				.getSystemService(Context.VIBRATOR_SERVICE); // æŒ¯åŠ¨100æ¯«ç§’
+		vibrator.vibrate(100); // æŒ¯åŠ¨100æ¯«ç§’
 	}
 
 	/**
-	 * ³É¹¦ÌáÊ¾ÒôºÍÌáÊ¾Õğ¶¯.<br>
+	 * æˆåŠŸæç¤ºéŸ³å’Œæç¤ºéœ‡åŠ¨.<br>
 	 * <br>
 	 * 
 	 * @param context
-	 * @Description 2013-9-9::::´´½¨´Ë·½·¨</br>
+	 * @Description 2013-9-9::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public static void callAlarm(Context context) {
 		AudioManager audioManager = (AudioManager) context
-				.getSystemService(Context.AUDIO_SERVICE); // ²¥·ÅÌáÊ¾Òô
+				.getSystemService(Context.AUDIO_SERVICE); // æ’­æ”¾æç¤ºéŸ³
 		int max = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
 		int current = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 		MediaPlayer player = MediaPlayer.create(context, R.raw.duka3);
 		player.setVolume((float) current / (float) max, (float) current
-				/ (float) max); // ÉèÖÃÌáÊ¾ÒôÁ¿
-		player.start();// ²¥·ÅÌáÊ¾Òô
+				/ (float) max); // è®¾ç½®æç¤ºéŸ³é‡
+		player.start();// æ’­æ”¾æç¤ºéŸ³
 
 		Vibrator vibrator = (Vibrator) context
-				.getSystemService(Context.VIBRATOR_SERVICE); // Õñ¶¯100ºÁÃë
-		vibrator.vibrate(100); // Õñ¶¯100ºÁÃë
+				.getSystemService(Context.VIBRATOR_SERVICE); // æŒ¯åŠ¨100æ¯«ç§’
+		vibrator.vibrate(100); // æŒ¯åŠ¨100æ¯«ç§’
 	}
 }
