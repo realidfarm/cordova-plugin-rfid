@@ -23,8 +23,8 @@ public class Power {
 	public static void on() {
 		try {
 			System.out.println("电源开");
-//			CommunicateShell.postShellComm("echo on >/proc/usb_dc_en");
-			CommunicateShell.postShellComm("echo on >/sys/class/gpio_switch/usb_dc_en");
+			CommunicateShell.postShellComm("echo on >/proc/usb_dc_en");
+//			CommunicateShell.postShellComm("echo on >/sys/class/gpio_switch/usb_dc_en");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -38,8 +38,8 @@ public class Power {
 	 */
 	public static void off() {
 		try {
-//			CommunicateShell.postShellComm("echo off >/proc/usb_dc_en");
-			CommunicateShell.postShellComm("echo off >/sys/class/gpio_switch/usb_dc_en");
+			CommunicateShell.postShellComm("echo off >/proc/usb_dc_en");
+//			CommunicateShell.postShellComm("echo off >/sys/class/gpio_switch/usb_dc_en");
 			System.out.println("电源关");
 		} catch (IOException e) {
 			e.printStackTrace();
