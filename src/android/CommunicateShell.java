@@ -11,26 +11,26 @@ import android.os.Handler;
 import android.os.Message;
 
 /**
- * Shell²Ù×÷.<br>
+ * Shellæ“ä½œ.<br>
  * <br>
  * CreateDate: 2013-9-5<br>
  * Copyright: Copyright(c) 2013-9-5<br>
  * <br>
  * 
  * @since v1.0.0
- * @Description 2013-9-5::::´´½¨´ËÀà</br>
+ * @Description 2013-9-5::::åˆ›å»ºæ­¤ç±»</br>
  */
 public final class CommunicateShell {
 	private final static String TAG = "CommunicateShell";
 
 	/**
-	 * ShellÌá½».<br>
+	 * Shellæäº¤.<br>
 	 * <br>
 	 * 
 	 * @param strCommand
-	 *            Shell²ÎÊı
-	 * @return Ìá½»½á¹û
-	 * @Description 2013-9-5::::´´½¨´Ë·½·¨</br>
+	 *            Shellå‚æ•°
+	 * @return æäº¤ç»“æœ
+	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public final static List<String> postShellComm(String strCommand)
 			throws IOException {
@@ -38,15 +38,15 @@ public final class CommunicateShell {
 	}
 
 	/**
-	 * Shell Ìá½».<br>
+	 * Shell æäº¤.<br>
 	 * <br>
 	 * 
 	 * @param strCommand
-	 *            Shell²ÎÊı
+	 *            Shellå‚æ•°
 	 * @param handler
-	 *            ÏûÏ¢´¦ÀíÕß
-	 * @return Ìá½»½á¹û
-	 * @Description 2013-9-5::::´´½¨´Ë·½·¨</br>
+	 *            æ¶ˆæ¯å¤„ç†è€…
+	 * @return æäº¤ç»“æœ
+	 * @Description 2013-9-5::::åˆ›å»ºæ­¤æ–¹æ³•</br>
 	 */
 	public final static List<String> postShellComm(String strCommand,
 			Handler handler) throws IOException {
