@@ -21,8 +21,8 @@ import com.langcoo.serialport.SerialPort;
 public class Rfid extends CordovaPlugin implements DFRfid {
 
     public boolean isDebug = true;
-    private final String SERIAL_PORT_NAME = "/dev/ttyMSM2";
-	//private final String SERIAL_PORT_NAME = "/dev/ttyHSL1";
+    //private final String SERIAL_PORT_NAME = "/dev/ttyMSM2";
+	private final String SERIAL_PORT_NAME = "/dev/ttyHSL1";
     private final int BAUDRATE = 115200;
 
     private int WAIT_TIME = 800;
