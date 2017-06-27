@@ -39,7 +39,7 @@
 
 完整调用demo:
 ```js
-   rfid.openDevice(function(data) {
+    rfid.openDevice(function(data) {
         rfidscan = $interval(function() {
             rfid.scanCycle(function(data) {
                 if (data) {
